@@ -1,4 +1,4 @@
-#规则包含 YouTuBe和X的域名和IP
+#规则包含 YouTuBe，TikTok.X的域名
 #更新时间20260515
 DOMAIN,release-assets.githubusercontent.com
 DOMAIN-KEYWORD,x10hosting
