@@ -1,3 +1,4 @@
+#Google和cloudflare的域名
 DOMAIN-KEYWORD,gmail
 DOMAIN-KEYWORD,cloudflare
 DOMAIN-KEYWORD,github
@@ -20,8 +21,6 @@ DOMAIN-SUFFIX,gvt3.com
 DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,github.com
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com
-IP-CIDR,74.125.0.0/16,no-resolve
-IP-CIDR,173.194.0.0/16,no-resolve
 DOMAIN-SUFFIX,argotunnel.com
 DOMAIN-SUFFIX,browser.run
 DOMAIN-SUFFIX,cfargotunnel.com
