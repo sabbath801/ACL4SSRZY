@@ -1,9 +1,11 @@
 # 内容：YouTube
 # 数量：17条
+DOMAIN,release-assets.githubusercontent.com
 DOMAIN-KEYWORD,youtube
-DOMAIN,youtubei.googleapis.com
-DOMAIN,yt3.ggpht.com
+DOMAIN-SUFFIX,ggpht.cn
+DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,gvt1.com
 DOMAIN-SUFFIX,gvt2.com
 DOMAIN-SUFFIX,withyoutube.com
 DOMAIN-SUFFIX,youtu.be
