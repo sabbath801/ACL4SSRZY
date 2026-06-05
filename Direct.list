@@ -1,5 +1,5 @@
 # NAME: Direct
-# 自用直连规则
+# 自用追加走直连规则
 DOMAIN-SUFFIX,eastmoney.com
 DOMAIN-KEYWORD,365365104
 DOMAIN,ml.jnfw.cc
