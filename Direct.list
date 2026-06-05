@@ -1,2 +1,6 @@
-ml.jnfw.cc
-direct.miyaip.online
+# NAME: Direct
+# 自用直连规则
+DOMAIN-SUFFIX,eastmoney.com
+DOMAIN-KEYWORD,365365104
+DOMAIN,ml.jnfw.cc
+DOMAIN,direct.miyaip.online
