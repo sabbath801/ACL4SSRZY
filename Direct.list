@@ -1,7 +1,7 @@
 # NAME: Direct
 # 自用追加走直连规则
 DOMAIN-SUFFIX,eastmoney.com
+DOMAIN-SUFFIX,dftzj.com
 DOMAIN-KEYWORD,365365104
 DOMAIN,ml.jnfw.cc
 DOMAIN,direct.miyaip.online
-DOMAIN,emcharts.dftzj.com
