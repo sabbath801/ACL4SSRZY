@@ -1,0 +1,105 @@
+[General]
+
+# ======= 说明 ======= #
+# > 自用的小火箭配置文件
+# > https://raw.githubusercontent.com/sabbath801/ACL4SSRZY/refs/heads/main/Shadowrocket.conf
+
+# ======= 注释 ======= #
+# > Shadowrocket打开HTTPS解密方法：
+# > 1 点击配置文件ⓘ - HTTPS解密 - 证书 - 生成新的CA证书 - 安装证书
+# > 2 手机设置 - 已下载描述文件 - 安装
+# > 3 手机设置 - 通用 - 关于本机 - 证书信任设置 - 开启对应Shadowrocket证书信任
+
+# ======= 手动 ======= #
+# > 请在「设置」-「GeoLite2资料库」-「国家」-「URL」填写下面链接
+# https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb
+
+# ======= 通用 ======= #
+bypass-system = true
+# 优化1：DNS 增加谷歌 DoH
+doh-server = https://dns.alidns.com/dns-query,https://doh.pub/dns-query,https://dns.google/dns-query
+skip-proxy = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local, captive.apple.com
+tun-excluded-routes = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.18.0.0/15, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
+dns-server = system
+ipv6 = false
+
+[Proxy Group]
+
+# ======= 手动 ======= #
+# 修复：同时保留手动选项、主页同步(proxy)以及所有订阅节点
+节点选择 = select, PROXY, 手动切换, DIRECT, 香港节点, 台湾节点, 新加坡节点, 日本节点, 美国节点
+手动切换 = select, PROXY, include-all-proxies=true, policy-regex-filter=^.*$
+苹果服务 = select, DIRECT, PROXY, 自动选择, 节点选择, 手动切换, 香港节点, 台湾节点, 新加坡节点, 日本节点, 美国节点, 其他节点
+油管视频 = select, PROXY, DIRECT, 节点选择, 手动切换, 香港节点, 台湾节点, 新加坡节点, 日本节点, 美国节点, 其他节点
+谷歌服务 = select, PROXY, 节点选择, 手动切换, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 其他节点
+微软服务 = select, DIRECT, proxy, 节点选择, 手动切换, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 其他节点
+漏网之鱼 = select, PROXY, 节点选择, 手动切换, DIRECT, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 其他节点
+
+[Rule]
+
+AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT
+AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
+# ======= 分流 ======= #
+RULE-SET,https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules.list, REJECT
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list, REJECT
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list, REJECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMedia/ChinaMedia.list, DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Direct/Direct.list, DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/China/China.list, DIRECT
+RULE-SET,https://raw.githubusercontent.com/sabbath801/ACL4SSRZY/refs/heads/main/Direct.list, DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YouTube/YouTube.list, 油管视频
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Twitter/Twitter.list, 油管视频
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TikTok/TikTok.list, 油管视频
+RULE-SET,https://raw.githubusercontent.com/sabbath801/ACL4SSRZY/refs/heads/main/proxydomain.list, 节点选择
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple.list, 苹果服务
+RULE-SET,https://raw.githubusercontent.com/sabbath801/ACL4SSRZY/refs/heads/main/talkatone.list, 谷歌服务
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.list, 谷歌服务
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.list, 谷歌服务
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Cloudflare/Cloudflare.list, 谷歌服务
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft.list, 微软服务
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Proxy/Proxy.list, 节点选择
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list, DIRECT
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list, DIRECT
+GEOIP,CN,DIRECT
+FINAL,漏网之鱼
+
+
+[Host]
+
+*testflight.apple.com = server:8.8.4.4
+
+
+[URL Rewrite]
+
+# ======= G重定向  ======= #
+^https?://(www.)?g.cn https://www.google.com 302
+^https?://(www.)?google.cn https://www.google.com 302
+
+# ======= 广告请求 ======= #
+(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302 
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad - reject
+
+# ======= 需要手动添加模块 ====== #
+# > 1 墨鱼去广告模块 去 ddgksf2013.top 一键添加
+
+
+[Script]
+# 优化2：补全 [Script] 标签
+
+# 优化3：YouTube 脚本参数优化
+油管增强 = type=http-response, pattern=^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch))(\?(.*))?$,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js,argument="{"lyricLang":"zh-Hans","captionLang":"zh-Hans","blockUpload":true,"blockImmersive":true,"blockShorts":false,"debug":false}"
+网页变身 = type=http-response, pattern=^https?:\/\/ddgksf2013.top\/$,requires-body=1,max-size=-1,script-path=https://ddgksf2013.top/scripts/web.rocket.js, timeout=3500
+脚本转换 = type=http-request, pattern=^https?:\/\/script\.hub\/file\/_start_\/.+type=(?:qx-rewrite|surge-module|all-module), script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/Rewrite-Parser.js, timeout=300
+
+
+[MITM]
+
+# > Shadowrocket仅会解密hostname指定的域名的请求，可以使用通配符。也可以使用前缀 - 排除特定主机名，如 -*.example.com
+# > iOS系统和某些应用有严格的安全策略，仅信任某些特定的证书，对这些域名启动解密可能导致问题，如 *.apple.com，*.icloud.com。
+
+# 优化4：MITM 主机名优化，移除 *.googlevideo.com
+hostname = youtubei.googleapis.com, script.hub, *.script.hub, ddgksf2013.top, *.google.cn, -consumer.fcbox.com, -*huami.com, -*amemv.com, -*snssdk.com, -www.google.com
+
+ca-passphrase = 
+ca-p12 = 
+enable = true
