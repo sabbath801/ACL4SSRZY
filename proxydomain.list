@@ -1,3 +1,5 @@
 #追加走当前节点的域名和IP
 DOMAIN,release-assets.githubusercontent.com
 DOMAIN,raw.githubusercontent.com
+DOMAIN,challenges.cloudflare.com
+DOMAIN,r2.cloudflarestorage.com
