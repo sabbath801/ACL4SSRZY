@@ -2,6 +2,6 @@
 DOMAIN,release-assets.githubusercontent.com
 DOMAIN,raw.githubusercontent.com
 DOMAIN,challenges.cloudflare.com
-DOMAIN,r2.cloudflarestorage.com
+DOMAIN-SUFFIX,r2.cloudflarestorage.com
 DOMAIN-SUFFIX,aipan.me
 DOMAIN-SUFFIX,jnfw.cc
