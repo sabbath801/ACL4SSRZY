@@ -1,9 +1,13 @@
-#google专线域名追加规则
+# ==========================================
+# Google & GitHub 专线加速与精简分流规则
+# ==========================================
+
+# 1. 附加专用域名
 DOMAIN,accounts.tampermonkey.net
 DOMAIN,challenges.cloudflare.com
-DOMAIN-KEYWORD,recaptch
-DOMAIN-KEYWORD,google
-# NAME: GitHub
+DOMAIN-KEYWORD,recaptcha
+
+# 2. GitHub 生态
 DOMAIN-SUFFIX,atom.io
 DOMAIN-SUFFIX,dependabot.com
 DOMAIN-SUFFIX,ghcr.io
@@ -35,11 +39,8 @@ DOMAIN-SUFFIX,rawgithub.com
 DOMAIN-SUFFIX,repo.new
 DOMAIN-SUFFIX,thegithubshop.com
 DOMAIN-KEYWORD,github
-DOMAIN-SUFFIX,api.github.com
-# ==========================================
-# Google 核心精简分流规则（已剔除 YouTube）
-# ==========================================
-# 1. 核心大类关键字（直接一网打尽所有 google、gmail、chrome 等衍生服务）
+
+# 3. Google 核心生态（关键字兜底 + 顶级后缀 + 特殊精准匹配）
 DOMAIN-KEYWORD,google
 DOMAIN-KEYWORD,gmail
 DOMAIN-KEYWORD,chrome
@@ -49,7 +50,7 @@ DOMAIN-KEYWORD,kaggle
 DOMAIN-KEYWORD,doubleclick
 DOMAIN-KEYWORD,adsense
 DOMAIN-KEYWORD,admob
-# 2. 顶级域名后缀全覆盖
+
 DOMAIN-SUFFIX,goog
 DOMAIN-SUFFIX,gle
 DOMAIN-SUFFIX,gbiz
@@ -72,7 +73,7 @@ DOMAIN-SUFFIX,tensorflow.org
 DOMAIN-SUFFIX,tenor.com
 DOMAIN-SUFFIX,waze.com
 DOMAIN-SUFFIX,deepmind.com
-# 3. 无法被关键字完美覆盖的特殊子域名 / 跨域服务（精准匹配）
+
 DOMAIN,google-ohttp-relay-safebrowsing.fastly-edge.com
 DOMAIN,ai.google.dev
 DOMAIN,alkalicore-pa.clients6.google.com
