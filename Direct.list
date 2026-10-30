@@ -1,4 +1,4 @@
-# NAME: Direct
+# NAME: Direct & Proxy Rules
 # Router managed 路由器管理IP
 DOMAIN-SUFFIX,ip6-localhost
 DOMAIN-SUFFIX,ip6-loopback
@@ -19,6 +19,7 @@ IP-CIDR6,::1/128,no-resolve
 IP-CIDR6,fc00::/7,no-resolve
 IP-CIDR6,fe80::/10,no-resolve
 IP-CIDR6,fd00::/8,no-resolve
+
 # Router managed 路由器管理域名
 DOMAIN,instant.arubanetworks.com
 DOMAIN,setmeup.arubanetworks.com
@@ -37,12 +38,14 @@ DOMAIN-SUFFIX,tendawifi.com
 DOMAIN-SUFFIX,zte.home
 DOMAIN-SUFFIX,tplogin.cn
 DOMAIN-SUFFIX,wifi.cmcc
+
 # 自用追加走直连规则
 DOMAIN-SUFFIX,eastmoney.com
 DOMAIN-SUFFIX,dftzj.com
 DOMAIN-SUFFIX,weavatar.com
 DOMAIN-KEYWORD,miyaip
 DOMAIN-KEYWORD,365365104
+
 # CF国内追加走直连规则
 DOMAIN-SUFFIX,cf-ns.com
 DOMAIN-SUFFIX,cf-ns.net
@@ -58,10 +61,10 @@ DOMAIN-SUFFIX,cloudflareinsights-cn.com
 DOMAIN-SUFFIX,cloudflareprod.com
 DOMAIN-SUFFIX,cloudflarestaging.com
 DOMAIN-SUFFIX,cloudflarestoragegw.com
+
 # ==========================================
 # GOOGLE 经典规则列表
 # ==========================================
-# 1. Domain (精准匹配)
 DOMAIN,recaptcha-cn.net
 DOMAIN,recaptcha.net
 DOMAIN,www.recaptcha-cn.net
@@ -176,7 +179,6 @@ DOMAIN,o.pki.goog
 DOMAIN,crl.pki.goog
 DOMAIN,crls.pki.goog
 DOMAIN,ocsp.pki.goog
-# 2. Domain-Suffix (后缀匹配)
 DOMAIN-SUFFIX,google.cn
 DOMAIN-SUFFIX,g.cn
 DOMAIN-SUFFIX,gkecnapps.cn
@@ -187,13 +189,12 @@ DOMAIN-SUFFIX,265.com
 DOMAIN-SUFFIX,gvt1-cn.com
 DOMAIN-SUFFIX,gvt2-cn.com
 DOMAIN-SUFFIX,ggpht.cn
-# 3. Domain-Regex (正则匹配)
 DOMAIN-REGEX,^r+[0-9]+(---|\\.)sn-(2x3|ni5|j5o)\\w{5}\\.xn--ngstr-lra8j\\.com$
 DOMAIN-REGEX,^r+[0-9]+(---|\\.)sn-(2x3|ni5|j5o)\\w{5}\\.googlevideo\\.com$
+
 # ==========================================
 # 阿里生态精简规则列表
 # ==========================================
-# 1. 核心关键字（一网打尽所有包含 alibaba、alipay、taobao、tmall、aliyun、cainiao、dingtalk、amap、youku 等的域名）
 DOMAIN-KEYWORD,alibaba
 DOMAIN-KEYWORD,alipay
 DOMAIN-KEYWORD,taobao
@@ -207,7 +208,6 @@ DOMAIN-KEYWORD,eleme
 DOMAIN-KEYWORD,quark
 DOMAIN-KEYWORD,umeng
 DOMAIN-KEYWORD,fliggy
-# 2. 无法用上述关键字完美覆盖的独立域名后缀
 DOMAIN-SUFFIX,tb.cn
 DOMAIN-SUFFIX,g.cn
 DOMAIN-SUFFIX,sm.cn
@@ -222,16 +222,15 @@ DOMAIN-SUFFIX,shuqi.com
 DOMAIN-SUFFIX,cnzz.com
 DOMAIN-SUFFIX,npmmirror.com
 DOMAIN-SUFFIX,teambition.com
-# 3. 特殊完整域名精准匹配
 DOMAIN,ykimg.alicdn.com
 DOMAIN,account-cn.alibabacloud.com
 DOMAIN,api.alibabacloud.com
 DOMAIN,cn.alibabacloud.com
 DOMAIN,status.alibabacloud.com
+
 # ==========================================
 # Microsoft / GitHub / Azure 极致精简分流规则
 # ==========================================
-# 1. 核心大类关键字（一网打尽所有官方产品及其庞大的子域名/API/遥测）
 DOMAIN-KEYWORD,microsoft
 DOMAIN-KEYWORD,azure
 DOMAIN-KEYWORD,office
@@ -252,7 +251,6 @@ DOMAIN-KEYWORD,dotnet
 DOMAIN-KEYWORD,nuget
 DOMAIN-KEYWORD,npm
 DOMAIN-KEYWORD,clarity
-# 2. 无法通过上述关键字直接覆盖的独立品牌、CDN 及第三方服务后缀
 DOMAIN-SUFFIX,live.com
 DOMAIN-SUFFIX,live.cn
 DOMAIN-SUFFIX,outlook.cn
@@ -280,7 +278,6 @@ DOMAIN-SUFFIX,microbit.org
 DOMAIN-SUFFIX,21vbc.com
 DOMAIN-SUFFIX,21vbluecloud.com
 DOMAIN-SUFFIX,21vbluecloud.net
-# 3. 极少数无法被关键字或后缀覆盖的外部托管 CDN / 特殊落地域名（精准匹配）
 DOMAIN,github-cloud.s3.amazonaws.com
 DOMAIN,github-production-release-asset-2e65be.s3.amazonaws.com
 DOMAIN,github-production-repository-file-5c1aeb.s3.amazonaws.com
@@ -291,11 +288,10 @@ DOMAIN,copilot-proxy.githubusercontent.com
 DOMAIN,copilot-workspace.githubnext.com
 DOMAIN,copilotprodattachments.blob.core.windows.net
 DOMAIN,vsmarketplacebadge.apphb.com
-# ==========================================
-# Apple 国内分流规则列表（完整保留，无精简）
-# ==========================================
 
-# 1. 精准域名匹配 (DOMAIN)
+# ==========================================
+# Apple 国内分流规则列表（完整保留）
+# ==========================================
 DOMAIN,amp-api-edge.apps.apple.com
 DOMAIN,amp-api-search-edge.apps.apple.com
 DOMAIN,amp-api.apps.apple.com
@@ -532,8 +528,6 @@ DOMAIN,ocsp.apple.com
 DOMAIN,ocsp2.apple.com
 DOMAIN,valid.apple.com
 DOMAIN,valid.origin-apple.com.akadns.net
-
-# 2. 域名后缀匹配 (DOMAIN-SUFFIX)
 DOMAIN-SUFFIX,apple.cn
 DOMAIN-SUFFIX,apple.com.cn
 DOMAIN-SUFFIX,apple-appstore.cn
