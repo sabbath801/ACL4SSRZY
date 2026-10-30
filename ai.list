@@ -1,16 +1,9 @@
-# NAME: AI流媒体等域名规则
-# =========================================
-# 由Xai-GROK经典规则列表
-# =========================================
-# Domain-Suffix (后缀匹配)
-DOMAIN-SUFFIX,grok.com
-DOMAIN-SUFFIX,grokipedia.com
+# NAME: AI & Media Stream Unified Rules
+# ==========================================
+# 1. X (Twitter) & Grok 生态
+# ==========================================
 DOMAIN-SUFFIX,x.ai
-DOMAIN-SUFFIX,grok.x.com
-# ==========================================
-# 由 X 经典规则列表
-# ==========================================
-# Domain-Suffix (后缀匹配)
+DOMAIN-SUFFIX,grokipedia.com
 DOMAIN-SUFFIX,twitter.jp
 DOMAIN-SUFFIX,twitter.biz
 DOMAIN-SUFFIX,pscp.tv
@@ -35,36 +28,37 @@ DOMAIN-SUFFIX,twvid.com
 DOMAIN-SUFFIX,vine.co
 DOMAIN-SUFFIX,twitter.map.fastly.net
 DOMAIN-SUFFIX,ads-twitter.com
-# IPv4 网段
-IP-CIDR,8.25.194.0/23
-IP-CIDR,8.25.196.0/23
-IP-CIDR,64.63.0.0/18
-IP-CIDR,69.12.56.0/21
-IP-CIDR,103.252.112.0/22
-IP-CIDR,104.244.42.0/24
-IP-CIDR,104.244.44.0/22
-IP-CIDR,185.45.4.0/22
-IP-CIDR,188.64.224.0/21
-IP-CIDR,192.48.236.0/23
-IP-CIDR,192.133.76.0/22
-IP-CIDR,199.16.156.0/22
-IP-CIDR,199.59.148.0/22
-IP-CIDR,199.96.56.0/23
-IP-CIDR,202.160.128.0/22
-IP-CIDR,209.237.208.0/24
-# IPv6 网段
-IP-CIDR6,2400:6680:f000::/36
-IP-CIDR6,2606:1f80:f000::/36
-IP-CIDR6,2a04:9d40:f000::/36
-# 1. Domain (精准匹配)
+# X 专用 ASN / IPv4 网段
+IP-CIDR,8.25.194.0/23,no-resolve
+IP-CIDR,8.25.196.0/23,no-resolve
+IP-CIDR,64.63.0.0/18,no-resolve
+IP-CIDR,69.12.56.0/21,no-resolve
+IP-CIDR,103.252.112.0/22,no-resolve
+IP-CIDR,104.244.42.0/24,no-resolve
+IP-CIDR,104.244.44.0/22,no-resolve
+IP-CIDR,185.45.4.0/22,no-resolve
+IP-CIDR,188.64.224.0/21,no-resolve
+IP-CIDR,192.48.236.0/23,no-resolve
+IP-CIDR,192.133.76.0/22,no-resolve
+IP-CIDR,199.16.156.0/22,no-resolve
+IP-CIDR,199.59.148.0/22,no-resolve
+IP-CIDR,199.96.56.0/23,no-resolve
+IP-CIDR,202.160.128.0/22,no-resolve
+IP-CIDR,209.237.208.0/24,no-resolve
+# X 专用 IPv6 网段
+IP-CIDR6,2400:6680:f000::/36,no-resolve
+IP-CIDR6,2606:1f80:f000::/36,no-resolve
+IP-CIDR6,2a04:9d40:f000::/36,no-resolve
+
+# ==========================================
+# 2. TikTok 生态
+# ==========================================
 DOMAIN,p16-tiktokcdn-com.akamaized.net
 DOMAIN,p16-tiktok-dm-sticker-sign-sg.ibyteimg.com
 DOMAIN,roovza-launches.appsflyersdk.com
 DOMAIN,roovza.inapps.appsflyersdk.com
 DOMAIN,roovza.launches.appsflyersdk.com
 DOMAIN,roovza.skadsdk.appsflyersdk.com
-
-# 2. Domain-Suffix (后缀匹配)
 DOMAIN-SUFFIX,bytedapm.com
 DOMAIN-SUFFIX,muscdn.com
 DOMAIN-SUFFIX,musical.ly
@@ -90,9 +84,45 @@ DOMAIN-SUFFIX,ttcdn-us.com
 DOMAIN-SUFFIX,ttlivecdn.com
 DOMAIN-SUFFIX,ttoverseaus.net
 DOMAIN-SUFFIX,ttwstatic.com
-DOMAIN-SUFFIX,tiktokcdn-us.com.edgesuite.net
-DOMAIN-SUFFIX,tiktokcdn.com.akamaized.net
-DOMAIN-SUFFIX,tiktokcdn.com.edgesuite.net
-DOMAIN-SUFFIX,tiktokv.com.edgekey.net
-DOMAIN-SUFFIX,tiktokv.com.edgesuite.net
 DOMAIN-SUFFIX,analytics.tiktok.com
+
+# ==========================================
+# 3. OpenAI / ChatGPT / Sora 统一生态（已去除与Sora的重复项）
+# ==========================================
+DOMAIN-KEYWORD,openai
+DOMAIN-KEYWORD,chatgpt
+DOMAIN-KEYWORD,sora
+DOMAIN-KEYWORD,oai
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,sora.com
+DOMAIN-SUFFIX,chat.com
+DOMAIN-SUFFIX,openai.org
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,oaistatsig.com
+DOMAIN-SUFFIX,crixet.com
+DOMAIN-SUFFIX,livekit.cloud
+DOMAIN-SUFFIX,datadoghq.com
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,qualtrics.com
+DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net
+DOMAIN,openaiapi-site.azureedge.net
+DOMAIN,openaiassets.blob.core.windows.net
+DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN,openaicom.imgix.net
+DOMAIN,openaicomproductionae4b.blob.core.windows.net
+DOMAIN,production-openaicom-storage.azureedge.net
+DOMAIN,browser-intake-datadoghq.com
+DOMAIN,o33249.ingest.sentry.io
+DOMAIN,o33249.ingest.us.sentry.io
+DOMAIN,openai.qualtrics.com
+DOMAIN-REGEX,^chatgpt-async-webps-prod-\\S+-\\d+\\.webpubsub\\.azure\\.com$
+
+# ==========================================
+# 4. Anthropic / Claude 生态
+# ==========================================
+DOMAIN-KEYWORD,anthropic
+DOMAIN-KEYWORD,claude
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
