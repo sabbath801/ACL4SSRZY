@@ -190,3 +190,44 @@ DOMAIN-SUFFIX,ggpht.cn
 # 3. Domain-Regex (正则匹配)
 DOMAIN-REGEX,^r+[0-9]+(---|\\.)sn-(2x3|ni5|j5o)\\w{5}\\.xn--ngstr-lra8j\\.com$
 DOMAIN-REGEX,^r+[0-9]+(---|\\.)sn-(2x3|ni5|j5o)\\w{5}\\.googlevideo\\.com$
+# ==========================================
+# 阿里生态精简规则列表
+# ==========================================
+
+# 1. 核心关键字（一网打尽所有包含 alibaba、alipay、taobao、tmall、aliyun、cainiao、dingtalk、amap、youku 等的域名）
+DOMAIN-KEYWORD,alibaba
+DOMAIN-KEYWORD,alipay
+DOMAIN-KEYWORD,taobao
+DOMAIN-KEYWORD,tmall
+DOMAIN-KEYWORD,aliyun
+DOMAIN-KEYWORD,cainiao
+DOMAIN-KEYWORD,dingtalk
+DOMAIN-KEYWORD,amap
+DOMAIN-KEYWORD,youku
+DOMAIN-KEYWORD,eleme
+DOMAIN-KEYWORD,quark
+DOMAIN-KEYWORD,umeng
+DOMAIN-KEYWORD,fliggy
+
+# 2. 无法用上述关键字完美覆盖的独立域名后缀
+DOMAIN-SUFFIX,tb.cn
+DOMAIN-SUFFIX,g.cn
+DOMAIN-SUFFIX,sm.cn
+DOMAIN-SUFFIX,pp.cn
+DOMAIN-SUFFIX,1688.com
+DOMAIN-SUFFIX,ele.me
+DOMAIN-SUFFIX,xiami.com
+DOMAIN-SUFFIX,xiami.net
+DOMAIN-SUFFIX,soku.com
+DOMAIN-SUFFIX,tudou.com
+DOMAIN-SUFFIX,shuqi.com
+DOMAIN-SUFFIX,cnzz.com
+DOMAIN-SUFFIX,npmmirror.com
+DOMAIN-SUFFIX,teambition.com
+
+# 3. 特殊完整域名精准匹配
+DOMAIN,ykimg.alicdn.com
+DOMAIN,account-cn.alibabacloud.com
+DOMAIN,api.alibabacloud.com
+DOMAIN,cn.alibabacloud.com
+DOMAIN,status.alibabacloud.com
