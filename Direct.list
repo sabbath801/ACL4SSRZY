@@ -541,3 +541,5 @@ DOMAIN-SUFFIX,powerappsportals.cn
 DOMAIN-SUFFIX,powerautomate.cn
 DOMAIN-SUFFIX,powerbi.cn
 DOMAIN-SUFFIX,telemetry.microsoft.com
+#TIKTOK国内IP检测
+DOMAIN-SUFFIX,perfops.byte-test.com
