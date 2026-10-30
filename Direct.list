@@ -1,4 +1,4 @@
-# NAME: Direct & Proxy Rules
+# NAME: Direct & Proxy Rules lan
 # Router managed 路由器管理IP
 DOMAIN-SUFFIX,ip6-localhost
 DOMAIN-SUFFIX,ip6-loopback
