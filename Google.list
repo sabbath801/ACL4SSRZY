@@ -1,7 +1,6 @@
 # =========================================
 # Google & GitHub 专线加速与精简分流规则
 # =========================================
-
 # 1. 附加专用域名
 DOMAIN,accounts.tampermonkey.net
 DOMAIN,challenges.cloudflare.com
@@ -39,7 +38,6 @@ DOMAIN-SUFFIX,rawgithub.com
 DOMAIN-SUFFIX,repo.new
 DOMAIN-SUFFIX,thegithubshop.com
 DOMAIN-KEYWORD,github
-
 # 3. Google 核心生态（关键字兜底 + 顶级后缀 + 特殊精准匹配）
 DOMAIN-KEYWORD,google
 DOMAIN-KEYWORD,gmail
@@ -50,7 +48,6 @@ DOMAIN-KEYWORD,kaggle
 DOMAIN-KEYWORD,doubleclick
 DOMAIN-KEYWORD,adsense
 DOMAIN-KEYWORD,admob
-
 DOMAIN-SUFFIX,goog
 DOMAIN-SUFFIX,gle
 DOMAIN-SUFFIX,gbiz
@@ -73,7 +70,6 @@ DOMAIN-SUFFIX,tensorflow.org
 DOMAIN-SUFFIX,tenor.com
 DOMAIN-SUFFIX,waze.com
 DOMAIN-SUFFIX,deepmind.com
-
 DOMAIN,google-ohttp-relay-safebrowsing.fastly-edge.com
 DOMAIN,ai.google.dev
 DOMAIN,alkalicore-pa.clients6.google.com
@@ -97,3 +93,15 @@ DOMAIN,preprod-publicca.googleapis.com
 DOMAIN,pki.google.com
 DOMAIN,recaptcha.net
 DOMAIN,www.recaptcha.net
+# ==========================================
+# GitLab 生态分流规则
+# ==========================================
+# 1. 核心关键字兜底（一网打尽所有包含 gitlab 的衍生服务）
+DOMAIN-KEYWORD,gitlab
+# 2. 经典精准后缀
+DOMAIN-SUFFIX,gitlab.com
+DOMAIN-SUFFIX,gitlab.io
+DOMAIN-SUFFIX,gitlab.net
+DOMAIN-SUFFIX,gitlab-static.net
+# 3. 特殊完整域名精准匹配（国内 CDN / 资源加速节点）
+DOMAIN,gitlab-assets.oss-cn-hongkong.aliyuncs.com
