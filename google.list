@@ -36,3 +36,63 @@ DOMAIN-SUFFIX,repo.new
 DOMAIN-SUFFIX,thegithubshop.com
 DOMAIN-KEYWORD,github
 DOMAIN-SUFFIX,api.github.com
+# ==========================================
+# Google 核心精简分流规则（已剔除 YouTube）
+# ==========================================
+# 1. 核心大类关键字（直接一网打尽所有 google、gmail、chrome 等衍生服务）
+DOMAIN-KEYWORD,google
+DOMAIN-KEYWORD,gmail
+DOMAIN-KEYWORD,chrome
+DOMAIN-KEYWORD,android
+DOMAIN-KEYWORD,blogspot
+DOMAIN-KEYWORD,kaggle
+DOMAIN-KEYWORD,doubleclick
+DOMAIN-KEYWORD,adsense
+DOMAIN-KEYWORD,admob
+# 2. 顶级域名后缀全覆盖
+DOMAIN-SUFFIX,goog
+DOMAIN-SUFFIX,gle
+DOMAIN-SUFFIX,gbiz
+DOMAIN-SUFFIX,guge
+DOMAIN-SUFFIX,appspot.com
+DOMAIN-SUFFIX,1e100.net
+DOMAIN-SUFFIX,g.co
+DOMAIN-SUFFIX,g.dev
+DOMAIN-SUFFIX,g.page
+DOMAIN-SUFFIX,gcr.io
+DOMAIN-SUFFIX,googlesource.com
+DOMAIN-SUFFIX,googleusercontent.com
+DOMAIN-SUFFIX,gstatic.com
+DOMAIN-SUFFIX,gvt1.com
+DOMAIN-SUFFIX,gvt2.com
+DOMAIN-SUFFIX,dartlang.org
+DOMAIN-SUFFIX,flutter.dev
+DOMAIN-SUFFIX,golang.org
+DOMAIN-SUFFIX,tensorflow.org
+DOMAIN-SUFFIX,tenor.com
+DOMAIN-SUFFIX,waze.com
+DOMAIN-SUFFIX,deepmind.com
+# 3. 无法被关键字完美覆盖的特殊子域名 / 跨域服务（精准匹配）
+DOMAIN,google-ohttp-relay-safebrowsing.fastly-edge.com
+DOMAIN,ai.google.dev
+DOMAIN,alkalicore-pa.clients6.google.com
+DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN,webchannel-alkalimakersuite-pa.clients6.google.com
+DOMAIN,geminiweb-pa.clients.google.com
+DOMAIN,geminiweb-pa.clients6.google.com
+DOMAIN,appsgenaiserver-pa.clients.google.com
+DOMAIN,appsgenaiserver-pa.clients6.google.com
+DOMAIN,appsgenaiserver-pa.googleapis.com
+DOMAIN,cloudaicompanion.googleapis.com
+DOMAIN,cloudcode-pa.googleapis.com
+DOMAIN,daily-cloudcode-pa.googleapis.com
+DOMAIN,notebooklm-pa.googleapis.com
+DOMAIN,notebooklm.googleapis.com
+DOMAIN,antigravity-pa.googleapis.com
+DOMAIN,antigravity.googleapis.com
+DOMAIN,firebase.googleapis.com
+DOMAIN,publicca.googleapis.com
+DOMAIN,preprod-publicca.googleapis.com
+DOMAIN,pki.google.com
+DOMAIN,recaptcha.net
+DOMAIN,www.recaptcha.net
