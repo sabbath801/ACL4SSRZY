@@ -19,7 +19,6 @@ IP-CIDR6,::1/128,no-resolve
 IP-CIDR6,fc00::/7,no-resolve
 IP-CIDR6,fe80::/10,no-resolve
 IP-CIDR6,fd00::/8,no-resolve
-
 # Router managed 路由器管理域名
 DOMAIN,instant.arubanetworks.com
 DOMAIN,setmeup.arubanetworks.com
@@ -96,68 +95,6 @@ DOMAIN,account-cn.alibabacloud.com
 DOMAIN,api.alibabacloud.com
 DOMAIN,cn.alibabacloud.com
 DOMAIN,status.alibabacloud.com
-
-# ==========================================
-# Microsoft / GitHub / Azure 极致精简分流规则
-# ==========================================
-DOMAIN-KEYWORD,microsoft
-DOMAIN-KEYWORD,azure
-DOMAIN-KEYWORD,office
-DOMAIN-KEYWORD,windows
-DOMAIN-KEYWORD,bing
-DOMAIN-KEYWORD,sharepoint
-DOMAIN-KEYWORD,onedrive
-DOMAIN-KEYWORD,xbox
-DOMAIN-KEYWORD,visualstudio
-DOMAIN-KEYWORD,github
-DOMAIN-KEYWORD,skype
-DOMAIN-KEYWORD,msn
-DOMAIN-KEYWORD,mojang
-DOMAIN-KEYWORD,playfab
-DOMAIN-KEYWORD,powerapps
-DOMAIN-KEYWORD,powerbi
-DOMAIN-KEYWORD,dotnet
-DOMAIN-KEYWORD,nuget
-DOMAIN-KEYWORD,npm
-DOMAIN-KEYWORD,clarity
-DOMAIN-SUFFIX,live.com
-DOMAIN-SUFFIX,live.cn
-DOMAIN-SUFFIX,outlook.cn
-DOMAIN-SUFFIX,lync.cn
-DOMAIN-SUFFIX,engkoo.com
-DOMAIN-SUFFIX,bethesda.net
-DOMAIN-SUFFIX,beth.games
-DOMAIN-SUFFIX,bethesdagamestudios.com
-DOMAIN-SUFFIX,bethsoft.com
-DOMAIN-SUFFIX,doom.com
-DOMAIN-SUFFIX,elderscrolls.com
-DOMAIN-SUFFIX,forza.net
-DOMAIN-SUFFIX,forzamotorsport.net
-DOMAIN-SUFFIX,minecraft.net
-DOMAIN-SUFFIX,minecraftservices.com
-DOMAIN-SUFFIX,atom.io
-DOMAIN-SUFFIX,gh.io
-DOMAIN-SUFFIX,ghcr.io
-DOMAIN-SUFFIX,git.io
-DOMAIN-SUFFIX,npmjs.com
-DOMAIN-SUFFIX,npmjs.org
-DOMAIN-SUFFIX,appcenter.ms
-DOMAIN-SUFFIX,jwt.ms
-DOMAIN-SUFFIX,microbit.org
-DOMAIN-SUFFIX,21vbc.com
-DOMAIN-SUFFIX,21vbluecloud.com
-DOMAIN-SUFFIX,21vbluecloud.net
-DOMAIN,github-cloud.s3.amazonaws.com
-DOMAIN,github-production-release-asset-2e65be.s3.amazonaws.com
-DOMAIN,github-production-repository-file-5c1aeb.s3.amazonaws.com
-DOMAIN,github-production-repository-image-32fea6.s3.amazonaws.com
-DOMAIN,github-production-upload-manifest-file-7fdce7.s3.amazonaws.com
-DOMAIN,github-production-user-asset-6210df.s3.amazonaws.com
-DOMAIN,copilot-proxy.githubusercontent.com
-DOMAIN,copilot-workspace.githubnext.com
-DOMAIN,copilotprodattachments.blob.core.windows.net
-DOMAIN,vsmarketplacebadge.apphb.com
-
 # ==========================================
 # Apple 国内分流规则列表（完整保留）
 # ==========================================
