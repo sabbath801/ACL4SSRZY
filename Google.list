@@ -6,7 +6,7 @@
 DOMAIN,accounts.tampermonkey.net
 DOMAIN,challenges.cloudflare.com
 DOMAIN-KEYWORD,recaptcha
-
+DOMAIN-SUFFIX,cloudflaremirrors.com
 # 2. GitHub 生态
 DOMAIN-SUFFIX,atom.io
 DOMAIN-SUFFIX,dependabot.com
