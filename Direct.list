@@ -44,7 +44,10 @@ DOMAIN-SUFFIX,dftzj.com
 DOMAIN-SUFFIX,weavatar.com
 DOMAIN-KEYWORD,miyaip
 DOMAIN-KEYWORD,365365104
-
+#TIKTOK国内IP检测
+DOMAIN-SUFFIX,perfops.byte-test.com
+#CLOUDFLARE国内IP检测
+DOMAIN-SUFFIX,perfops.cloudflareperf.com
 # CF国内追加走直连规则
 DOMAIN-SUFFIX,cf-ns.com
 DOMAIN-SUFFIX,cf-ns.net
@@ -541,5 +544,3 @@ DOMAIN-SUFFIX,powerappsportals.cn
 DOMAIN-SUFFIX,powerautomate.cn
 DOMAIN-SUFFIX,powerbi.cn
 DOMAIN-SUFFIX,telemetry.microsoft.com
-#TIKTOK国内IP检测
-DOMAIN-SUFFIX,perfops.byte-test.com
