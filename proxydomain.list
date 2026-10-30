@@ -4,12 +4,12 @@ DOMAIN,raw.githubusercontent.com
 DOMAIN-SUFFIX,r2.cloudflarestorage.com
 DOMAIN-SUFFIX,aipan.me
 DOMAIN-SUFFIX,jnfw.cc
+#talkatone域名规则
 DOMAIN-SUFFIX,agkn.com
 DOMAIN-SUFFIX,cohere.com
 DOMAIN-SUFFIX,inmobi.com
 DOMAIN-SUFFIX,ip-api.com
 DOMAIN-SUFFIX,kochava.com
-#talkatone域名规则
 DOMAIN-SUFFIX,mobilefuse.com
 DOMAIN-SUFFIX,talkatone.com
 DOMAIN-SUFFIX,tktn.at
